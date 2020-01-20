@@ -1,0 +1,14 @@
+<h3><%= article.title %></h3>
+<p><%= article.description %></p>
+<h4><a href="/articles/<%= article.id %>/likes"><%= article.likes %></a></h4>
+
+<form action="/articles/<%= article.id %>/comments" method="POST">
+  <input type="text" name="content">
+  <input type="submit" value="Add Comment">
+</form>
+
+<% article.comments.forEach(comment => { %>
+  <p><%= comment.content %></p>
+<% }) %>
+
+

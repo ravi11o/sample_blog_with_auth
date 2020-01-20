@@ -1,0 +1,10 @@
+<% if(msg) { %>
+  <p><%= msg %></p>
+<% } %> 
+
+
+<form action="/users/login" method="POST">
+  <input type="email" name="email" placeholder="Enter Email">
+  <input type="password" name="password" placeholder="Add Password">
+  <input type="submit" value="Login here">
+</form>
